@@ -5,7 +5,9 @@ import { SITE_TITLE } from '../config';
 
 <header>
 	<div class="upper-navbar container">
-		<img src="/images/escut_casb.png" alt="Imatge de l'escut del Creu Alta Sabadell Bàsquet" class="escut">
+		<HeaderLink href="/">
+			<img src="/images/escut_casb.png" alt="Imatge de l'escut del Creu Alta Sabadell Bàsquet" class="escut">
+		</HeaderLink>
 		<div class="header-nav">
 			<nav>
 				<HeaderLink href="/">
@@ -15,21 +17,23 @@ import { SITE_TITLE } from '../config';
 					<img src="/images/location.svg" alt="Location logo" width="32">
 				</HeaderLink>
 				<HeaderLink href="https://twitter.com/CreuAltaBasquet" target="_blank" title="Twitter">
-					<img src="/images/twitter.svg" alt="Twitter logo" width="32">
+					<img src="/images/twitter.svg" alt="Twitter logo" width="40">
 				</HeaderLink>
 				<HeaderLink href="https://www.instagram.com/creualtabasquet" target="_blank" title="Instagram">
 					<img src="/images/instagram.svg" alt="Instagram logo" width="32">
 				</HeaderLink>
 				<HeaderLink href="/historia">Historia</HeaderLink>
 			</nav>
-			<h1>{SITE_TITLE}</h1>
+			<HeaderLink href="/">
+				<h1>{SITE_TITLE}</h1>
+			</HeaderLink>
 		</div>
 	</div>
 </header>
 
 <style lang="scss">
 header {
-	background: linear-gradient(180deg, #1F71B6, #7dbceb);
+	background: linear-gradient(180deg, #1393e1, #51ade7bd);
 	width: 100%;
 	padding: 1rem 0rem;
 	margin: 0;
@@ -64,7 +68,9 @@ header {
 	padding: 1rem 0rem;
 }
 h1 {
+	font-family: 'Helvetica', sans-serif;
 	font-size: 2rem;
 	color: white;
+	text-align: center;
 }
 </style>
