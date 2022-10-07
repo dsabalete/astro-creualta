@@ -6,8 +6,7 @@
 body {
 	font-family: Verdana, sans-serif;
 	margin: auto;
-	padding: 20px;
-	max-width: 65ch;
+	padding: 0;
 	text-align: left;
 	background-color: #fff;
 	word-wrap: break-word;
@@ -64,4 +63,11 @@ blockquote {
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
+}
+.container {
+	max-width: 1000px;
+	margin: auto;
+	padding: 0 20px;
+	padding-left: auto;
+	padding-right: auto;
 }

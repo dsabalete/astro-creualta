@@ -3,47 +3,68 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
 ---
 
-
 <header>
-
-	<div class="upper-navbar">
-		<img src="/images/escut_casb.png" alt="Imatge de l'escut del Creu Alta Sabadell Bàsquet">
-		<nav>
-			<HeaderLink href="/">Inici</HeaderLink>
-			<HeaderLink href="/historia">Historia</HeaderLink>
-			<HeaderLink href="/onsom">On Som</HeaderLink>
-			<HeaderLink href="https://twitter.com/CreuAltaBasquet" target="_blank">Twitter</HeaderLink>
-			<HeaderLink href="https://www.instagram.com/creualtabasquet" target="_blank">Instagram</HeaderLink>
-		</nav>
+	<div class="upper-navbar container">
+		<img src="/images/escut_casb.png" alt="Imatge de l'escut del Creu Alta Sabadell Bàsquet" class="escut">
+		<div class="header-nav">
+			<nav>
+				<HeaderLink href="/">
+					<img src="/images/home.svg" alt="Home logo" width="32">
+				</HeaderLink>
+				<HeaderLink href="/onsom" title="On Som?">
+					<img src="/images/location.svg" alt="Location logo" width="32">
+				</HeaderLink>
+				<HeaderLink href="https://twitter.com/CreuAltaBasquet" target="_blank" title="Twitter">
+					<img src="/images/twitter.svg" alt="Twitter logo" width="32">
+				</HeaderLink>
+				<HeaderLink href="https://www.instagram.com/creualtabasquet" target="_blank" title="Instagram">
+					<img src="/images/instagram.svg" alt="Instagram logo" width="32">
+				</HeaderLink>
+				<HeaderLink href="/historia">Historia</HeaderLink>
+			</nav>
+			<h1>{SITE_TITLE}</h1>
+		</div>
 	</div>
-	<h1>
-		{SITE_TITLE}
-	</h1>
-	
 </header>
+
 <style lang="scss">
-	.upper-navbar {
+header {
+	background: linear-gradient(180deg, #1F71B6, #7dbceb);
+	width: 100%;
+	padding: 1rem 0rem;
+	margin: 0;
+}
+.upper-navbar {
+	display: flex;
+	flex-direction: row;
+	.escut {
+		width: 95px;
+		height: 105px;
+		margin-right: 50px;
+	}
+	.header-nav {
+		width: 100%;
+	}
+	nav {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-
-		img {
-			margin-right: 50px;
-		}
-
-		
-		a {
-			color: white;
-
-		}
+		justify-content: end;
+		width: 100%;
+		height: 32px;
+		gap: 2rem;
 	}
-	header {
-		background: linear-gradient(180deg, #1F71B6, #7dbceb);
-		padding: 1rem 0rem;
-	}
-	h1 {
-		font-size: 2rem;
+
+	a {
 		color: white;
+		font-size: 1.5rem;
 	}
-
+}
+header {
+	background: linear-gradient(180deg, #1F71B6, #7dbceb);
+	padding: 1rem 0rem;
+}
+h1 {
+	font-size: 2rem;
+	color: white;
+}
 </style>

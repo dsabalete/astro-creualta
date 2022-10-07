@@ -1,19 +1,35 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import Sections from '../components/Sections.astro'
+import Sponsors from '../components/Sponsors.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
-import Header from "../components/Header.astro";
 
-const img2 = await import('../../public/images/placeholder-hero.jpg')
 ---
-<style>
-    header {
-        background: linear-gradient(180deg, #1F71B6, #7dbceb);
-        width: 100%;
-        padding: 1rem 2rem;
-    }
-
-</style>
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-    <Header />
+  <div class="hero">
+    <img src="/images/tothom.jpg" alt="Foto del Club">
+  </div>
+  <Sections />
+  <Sponsors />
 </BaseLayout>
+
+<style lang="scss">
+  $primary-color: #1F71B6;
+  h2 {
+    color: $primary-color;
+    text-align: center;
+  }
+  .hero {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //height: 100vh;
+  }
+  .hero img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+  }
+</style>

@@ -1,0 +1,97 @@
+---
+const sponsorList = [
+  {
+    alt: 'MitSport',
+    href: 'https://mitsport-shop.com/creualta/',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/mitsport.jpg',
+    target: '_blank'
+  },
+  {
+    alt: 'CJB',
+    href: 'https://www.penya.com/ca/',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/penya.gif',
+    target: '_blank'
+  },
+  {
+    alt: 'Superwagen',
+    href: 'https://www.superwagen.com/',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/superwagen.png',
+    target: '_blank'
+  },
+  {
+    alt: 'Infoserveis',
+    href: 'https://www.infoserveis.cat/',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/infoserveis.png',
+    target: '_blank'
+  },
+  {
+    alt: 'Expofinques',
+    href: 'http://www.exessabadellcentre.com',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/exes.png',
+    target: '_blank'
+  },
+  {
+    alt: 'Ars Salut Esportiva',
+    href: 'https://arssalutesportiva.com/',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/ars.png',
+    target: '_blank'
+  },
+  {
+    alt: 'Agnes',
+    href: '#',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/agnes.png',
+    target: ''
+  },
+  {
+    alt: 'Contrast',
+    href: 'http://www.contrastrestaurant.cat/',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/contrast_200x80.png',
+    target: '_blank'
+  },
+  {
+    alt: 'Assessors March',
+    href: '#',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/march2.png',
+    target: ''
+  },
+  {
+    alt: 'Winzule',
+    href: '#',
+    src: 'http://www.creualtabasquet.cat/patrocinadors/images/winzule.png',
+    target: ''
+  }
+]
+---
+
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+</div>
+
+
+<div class="sponsor-list">
+  {sponsorList.map((sponsor, index) => (
+    <div class="sponsor-item">
+      <a href={sponsor.href} target={sponsor.target}>
+        <img alt={sponsor.alt} src={sponsor.src} />
+      </a>
+    </div>
+  ))}
+</div>
+
+<style lang="scss">
+.sponsor-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.sponsor-item {
+  display: block;
+  max-width: 300px;
+  max-height: 100%;
+  width: 250px;
+  height: auto;
+  margin: 0.5rem;
+}
+</style>
