@@ -2,4 +2,4 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = 'Web del Creu Alta Sabadell Bàsquet';
-export const SITE_DESCRIPTION = 'Benvinguts a la web del Creu Alta!';
+export const SITE_DESCRIPTION = 'Aquesta és la web del Club de Bàsquet de la Creu Alta de Sabadell. Aquí podràs trobar informació sobre el club, noticies, dades dels equips i dates i horaris de les competicions.';

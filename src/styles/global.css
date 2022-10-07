@@ -1,10 +1,12 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+	--main-family: 'Poppins', sans-serif;
+	--color-bg: linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%);
+}
+
 body {
-	font-family: Verdana, sans-serif;
+	font-family: 'Poppins', sans-serif;
 	margin: auto;
 	padding: 0;
 	text-align: left;

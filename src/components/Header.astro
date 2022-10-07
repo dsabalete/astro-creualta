@@ -1,6 +1,6 @@
 ---
-import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../config';
+import HeaderLink from './HeaderLink.astro'
+import { SITE_TITLE } from '../config'
 ---
 
 <header>
@@ -21,7 +21,8 @@ import { SITE_TITLE } from '../config';
 				</HeaderLink>
 				<HeaderLink href="https://www.instagram.com/creualtabasquet" target="_blank" title="Instagram">
 					<img src="/images/instagram.svg" alt="Instagram logo" width="32">
-				</HeaderLink>
+				</HeaderLink>		
+				<HeaderLink href="/blog">Notícies</HeaderLink>
 				<HeaderLink href="/historia">Historia</HeaderLink>
 			</nav>
 			<HeaderLink href="/">
@@ -33,9 +34,10 @@ import { SITE_TITLE } from '../config';
 
 <style lang="scss">
 header {
-	background: linear-gradient(180deg, #1393e1, #51ade7bd);
+	background: var(--color-bg);
+	//background: linear-gradient(180deg, #1393e1, #51ade7bd);
 	width: 100%;
-	padding: 1rem 0rem;
+	padding: 2rem 0rem 0rem;
 	margin: 0;
 }
 .upper-navbar {
