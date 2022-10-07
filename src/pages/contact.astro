@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+const title = "Contacte"
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <h1>{title}</h1>
+  <form action="https://www.creualtabasquet.cat/drupal/contact" accept-charset="UTF-8" method="post" id="contact-mail-page">
+    <p>
+      Podeu deixar un missatge utilitzant el formulari de contacte de sota o be enviant 
+      un missatge a <a href="mailto:secretaria@creualtabasquet.cat">secretaria@creualtabasquet.cat</a>
+    </p>
+    <div>
+      <div class="form-item" id="edit-name-wrapper">
+        <label for="edit-name">El vostre nom: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
+        <input type="text" maxlength="255" name="name" id="edit-name" size="60" value="" class="form-text required">
+      </div>
+      <div class="form-item" id="edit-mail-wrapper">
+        <label for="edit-mail">La vostra adreça electrònica: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
+        <input type="text" maxlength="255" name="mail" id="edit-mail" size="60" value="" class="form-text required">
+      </div>
+      <div class="form-item" id="edit-subject-wrapper">
+        <label for="edit-subject">Assumpte: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
+        <input type="text" maxlength="255" name="subject" id="edit-subject" size="60" value="" class="form-text required">
+      </div>
+      <div class="form-item" id="edit-message-wrapper">
+        <label for="edit-message">Missatge: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
+        <div class="resizable-textarea">
+          <span>
+            <textarea cols="60" rows="5" name="message" id="edit-message" class="form-textarea resizable required textarea-processed"></textarea>
+          </span>
+        </div>
+      </div>
+      <input type="submit" name="op" id="edit-submit" value="Envia un correu electrònic" class="form-submit">
+      <input type="hidden" name="form_build_id" id="form-bUdPev6BqVmyq4-5ps1c5UGT2xc0p3nmtnSlbfBGx0U" value="form-bUdPev6BqVmyq4-5ps1c5UGT2xc0p3nmtnSlbfBGx0U">
+      <input type="hidden" name="form_id" id="edit-contact-mail-page" value="contact_mail_page">
+
+    </div>
+  </form>
+  <a href="/">Inici</a>
+</BaseLayout>

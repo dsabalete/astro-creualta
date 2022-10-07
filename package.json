@@ -11,13 +11,18 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/lit": "^1.0.1",
     "@astrojs/mdx": "^0.11.4",
+    "@astrojs/react": "^1.1.4",
     "@astrojs/rss": "^1.0.2",
     "@astrojs/sitemap": "^1.0.0",
-    "@astrojs/tailwind": "^2.0.2",
+    "@astrojs/svelte": "^1.0.1",
     "@astrojs/vue": "^1.1.0",
     "astro": "^1.4.4",
     "tailwindcss": "^3.1.8",
     "vue": "^3.2.40"
+  },
+  "devDependencies": {
+    "sass": "^1.55.0"
   }
 }
