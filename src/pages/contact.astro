@@ -6,7 +6,20 @@ const title = "Contacte"
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
   <h1>{title}</h1>
-  <form action="https://www.creualtabasquet.cat/drupal/contact" accept-charset="UTF-8" method="post" id="contact-mail-page">
+  <form 
+    netlify
+    netlify-honeypot="bot-field"
+    name="contact"
+    method="POST" 
+    action="/success" 
+    accept-charset="UTF-8" 
+    >
+    <p class="hidden">
+      <label>
+        Don’t fill this out if you're human: <input name="bot-field" />
+      </label>
+    </p>
+    <input type="hidden" name="form-name" value="contact">
     <p>
       Podeu deixar un missatge utilitzant el formulari de contacte de sota o be enviant 
       un missatge a <a href="mailto:secretaria@creualtabasquet.cat">secretaria@creualtabasquet.cat</a>
@@ -33,10 +46,13 @@ const title = "Contacte"
         </div>
       </div>
       <input type="submit" name="op" id="edit-submit" value="Envia un correu electrònic" class="form-submit">
-      <input type="hidden" name="form_build_id" id="form-bUdPev6BqVmyq4-5ps1c5UGT2xc0p3nmtnSlbfBGx0U" value="form-bUdPev6BqVmyq4-5ps1c5UGT2xc0p3nmtnSlbfBGx0U">
-      <input type="hidden" name="form_id" id="edit-contact-mail-page" value="contact_mail_page">
-
     </div>
   </form>
   <a href="/">Inici</a>
 </BaseLayout>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>

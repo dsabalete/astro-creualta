@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
+const title = "Missatge enviat!"
+---
+
+<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <main>
+    <h1>{title}</h1>
+    <p>Gràcies per posar-vos en contacte amb el Club! 
+      Pots tornar a la pàgina principal fent clic <a href="/">aquí</a>.</p> 
+  </main>
+</BaseLayout>
