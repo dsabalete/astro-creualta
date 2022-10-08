@@ -3,14 +3,24 @@
 ---
 
 <div class="sections">
-  <a href="/noticies">Noticies</a>
-  <a href="/equips">Equips</a>
+  <a href="/noticies">
+    <img src="/images/news.svg" width="100" alt="News Icon">
+    <div>Noticies</div> 
+  </a>
+  <a href="/equips">
+    <img src="/images/team.svg" width="100" alt="Team Icon">
+    <div>Equips</div>
+  </a>
+    <a href="/historia">
+    <img src="/images/history.svg" width="100" alt="History Icon">
+    <div>Historia</div>
+  </a>
 </div>
 
 <style lang="scss">
   .sections {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
   }
   .sections a {
@@ -24,10 +34,17 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    img {
+      filter: invert(1);
+    }
     
     &:hover {
       background-color: var(--color-secondary);
       color: white;
+    img {
+      filter: invert(0);
+    }
+      
     }
   }
 </style>

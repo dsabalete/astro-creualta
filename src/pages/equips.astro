@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
-	(a, b) => b.frontmatter.categoria - a.frontmatter.categoria
+	(a, b) =>  a.frontmatter.order - b.frontmatter.order
 );
 ---
 
