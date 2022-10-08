@@ -40,8 +40,9 @@ const {
 	<body>
 		<Header />
 		<main class="container">
+			<h1 class="title">{title}</h1>
+
 			<article>
-				<h1 class="title">{title}</h1>
 				{pubDate && <time>{pubDate}</time>}
 				{updatedDate && <div>Ultima modificació <time>{updatedDate}</time></div>}
 				{heroImage && (
@@ -49,7 +50,7 @@ const {
 						width={720}
 						height={360}
 						src={heroImage}
-						alt=""
+						alt="Imatge de portada"
 					/>
 				)}
 				<hr/>
