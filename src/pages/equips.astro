@@ -1,0 +1,48 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
+	(a, b) => b.frontmatter.categoria - a.frontmatter.categoria
+);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			td {
+				padding-right: 3rem;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main class="container">
+			<h1>Equips</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>Equip</th>
+						<th>Categoria</th>
+						<th>Temporada</th>
+					</tr>
+				</thead>
+				<tbody>
+					{equips.map((equip) => (
+						<tr class="equip">
+							<td><a href={equip.url}>{equip.frontmatter.title}</a></td>
+							<td>{equip.frontmatter.categoria}</td>
+							<td>{equip.frontmatter.temporada}</td>
+							</tr>
+							))}
+				</tbody>
+			</table>
+		</main>
+		<Footer />
+	</body>
+</html>

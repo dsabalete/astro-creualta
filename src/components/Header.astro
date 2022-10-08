@@ -22,9 +22,10 @@ import { SITE_TITLE } from '../config'
 				<HeaderLink href="https://www.instagram.com/creualtabasquet" target="_blank" title="Instagram">
 					<img src="/images/instagram.svg" alt="Instagram logo" width="32">
 				</HeaderLink>		
-				<HeaderLink href="/blog">Notícies</HeaderLink>
+				<HeaderLink href="/noticies">Notícies</HeaderLink>
 				<HeaderLink href="/historia">Historia</HeaderLink>
 			</nav>
+			
 			<HeaderLink href="/">
 				<h1>{SITE_TITLE}</h1>
 			</HeaderLink>
@@ -35,7 +36,6 @@ import { SITE_TITLE } from '../config'
 <style lang="scss">
 header {
 	background: var(--color-bg);
-	//background: linear-gradient(180deg, #1393e1, #51ade7bd);
 	width: 100%;
 	padding: 2rem 0rem 0rem;
 	margin: 0;
@@ -46,6 +46,7 @@ header {
 	.escut {
 		width: 95px;
 		height: 105px;
+		min-width: 95px;
 		margin-right: 50px;
 	}
 	.header-nav {
@@ -59,20 +60,16 @@ header {
 		height: 32px;
 		gap: 2rem;
 	}
-
+	h1 {
+		font-family: 'Helvetica', sans-serif;
+		font-size: 2rem;
+		color: white;
+		text-align: center;
+	}
 	a {
 		color: white;
 		font-size: 1.5rem;
 	}
 }
-header {
-	background: linear-gradient(180deg, #1F71B6, #7dbceb);
-	padding: 1rem 0rem;
-}
-h1 {
-	font-family: 'Helvetica', sans-serif;
-	font-size: 2rem;
-	color: white;
-	text-align: center;
-}
+
 </style>

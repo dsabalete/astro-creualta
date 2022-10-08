@@ -2,6 +2,32 @@
 
 ---
 
-<div>
-  Sections
+<div class="sections">
+  <a href="/noticies">Noticies</a>
+  <a href="/equips">Equips</a>
 </div>
+
+<style lang="scss">
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+  .sections a {
+    border: 2px solid var(--color-secondary);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px lightblue;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem 0;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    &:hover {
+      background-color: var(--color-secondary);
+      color: white;
+    }
+  }
+</style>

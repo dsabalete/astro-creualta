@@ -2,7 +2,9 @@
 
 :root {
 	--main-family: 'Poppins', sans-serif;
-	--color-bg: linear-gradient(180deg, #ffffff 0%, #f2f2f2 100%);
+	--color-bg: linear-gradient(180deg, #1393e1, #51ade7bd);
+	--color-primary: #1393e1;
+	--color-secondary: #51ade7bd;
 }
 
 body {
@@ -28,6 +30,11 @@ b {
 }
 a {
 	color: #0F63B9;
+	text-decoration: none;
+	font-weight: 500;
+}
+a:hover {
+	color: #0c4782;
 }
 nav a {
 	margin-right: 10px;

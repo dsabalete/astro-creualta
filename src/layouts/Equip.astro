@@ -6,15 +6,18 @@ import Footer from "../components/Footer.astro";
 export interface Props {
 	content: {
 		title: string;
+    categoria: string;
 		description: string;
+    temporada: string;
 		pubDate?: string;
 		updatedDate?: string;
 		heroImage?: string;
+    fitxa?: string;
 	};
 }
 
 const {
-	content: { title, description, pubDate, updatedDate, heroImage },
+	content: { title, categoria, description, temporada, pubDate, updatedDate, heroImage, fitxa },
 } = Astro.props;
 ---
 
@@ -26,10 +29,10 @@ const {
 				display: grid;
 				grid-template-rows: auto 1fr auto;
 			}
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
+      article p span {
+        text-transform: uppercase;
+        color: #000;
+      }
 			hr {
   			border-top: 1px solid #DDD;
 				margin: 1rem 0;
@@ -40,11 +43,10 @@ const {
 	<body>
 		<Header />
 		<main class="container">
+      <h1>{title} - Temporada {temporada}</h1>
+
 			<article>
-				<h1 class="title">{title}</h1>
-				{pubDate && <time>{pubDate}</time>}
-				{updatedDate && <div>Ultima modificació <time>{updatedDate}</time></div>}
-				{heroImage && (
+        {heroImage && (
 					<img
 						width={720}
 						height={360}
@@ -52,9 +54,19 @@ const {
 						alt=""
 					/>
 				)}
-				<hr/>
+
+        <p>Categoria: <span>{categoria}</span></p>
+				{pubDate && <div>Publicació: <time>{pubDate}</time></div>}
+				{updatedDate && <div>Ultima modificació: <time>{updatedDate}</time></div>}
+				
+        <hr/>
+        {fitxa && (
+          <a href={fitxa} target="_blank">Fitxa</a>
+        )}
 				<slot />
+        
 			</article>
+      <a href="/equips">Altres equips</a>
 		</main>
 		<Footer />
 	</body>
