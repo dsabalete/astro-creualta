@@ -11,25 +11,25 @@ import { SITE_TITLE } from '../config'
 		<div class="header-nav">
 			<nav>
 				<HeaderLink href="/">
-					<img src="/images/home.svg" alt="Home logo" width="32">
+					<img src="/images/home.svg" alt="Home logo">
 				</HeaderLink>
 				<HeaderLink href="/onsom" title="On Som?">
-					<img src="/images/location.svg" alt="Location logo" width="32">
+					<img src="/images/location.svg" alt="Location logo">
 				</HeaderLink>
 				<HeaderLink href="/noticies" title="Noticies">
-					<img src="/images/news.svg" alt="News logo" width="32" class="news-logo">
+					<img src="/images/news.svg" alt="News logo" class="news-logo">
 				</HeaderLink>
 				<HeaderLink href="/equips" title="Equips">
-					<img src="/images/team.svg" alt="Team logo" width="32" class="team-logo">
+					<img src="/images/team.svg" alt="Team logo" class="team-logo">
 				</HeaderLink>
 				<HeaderLink href="/historia" title="Historia">
-					<img src="/images/history.svg" alt="History logo" width="32" class="history-logo">
+					<img src="/images/history.svg" alt="History logo" class="history-logo">
 				</HeaderLink>
 				<HeaderLink href="https://twitter.com/CreuAltaBasquet" target="_blank" title="Twitter">
-					<img src="/images/twitter.svg" alt="Twitter logo" width="40">
+					<img src="/images/twitter.svg" alt="Twitter logo">
 				</HeaderLink>
 				<HeaderLink href="https://www.instagram.com/creualtabasquet" target="_blank" title="Instagram">
-					<img src="/images/instagram.svg" alt="Instagram logo" width="32">
+					<img src="/images/instagram.svg" alt="Instagram logo">
 				</HeaderLink>		
 			</nav>
 			
@@ -44,8 +44,12 @@ import { SITE_TITLE } from '../config'
 header {
 	background: var(--color-bg);
 	width: 100%;
-	padding: 2rem 0rem 0rem;
+	padding-top: 0.8rem;
 	margin: 0;
+
+	@media (min-width: 600px) {
+		padding: 2rem 0rem 0rem;
+	}
 }
 .team-logo {
 	color: white;
@@ -68,13 +72,26 @@ header {
 		justify-content: end;
 		width: 100%;
 		height: 32px;
-		gap: 2rem;
+		gap: 1rem;
+		
+		img {
+			width: 20px;
+		}
+		@media (min-width: 600px) {
+			gap: 2rem;
+			img {
+				width: 32px;
+			}
+		}
 	}
 	h1 {
 		font-family: 'Helvetica', sans-serif;
-		font-size: 2rem;
+		font-size: 1.2rem;
 		color: white;
 		text-align: center;
+		@media (min-width: 600px) {
+			font-size: 2rem;
+		}
 	}
 	a {
 		color: white;

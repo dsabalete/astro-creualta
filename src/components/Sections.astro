@@ -4,15 +4,15 @@
 
 <div class="sections">
   <a href="/noticies">
-    <img src="/images/news.svg" width="100" alt="News Icon">
+    <img src="/images/news.svg" alt="News Icon">
     <div>Noticies</div> 
   </a>
   <a href="/equips">
-    <img src="/images/team.svg" width="100" alt="Team Icon">
+    <img src="/images/team.svg" alt="Team Icon">
     <div>Equips</div>
   </a>
     <a href="/historia">
-    <img src="/images/history.svg" width="100" alt="History Icon">
+    <img src="/images/history.svg" alt="History Icon">
     <div>Historia</div>
   </a>
 </div>
@@ -21,29 +21,44 @@
   .sections {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1rem;
+    @media (min-width: 600px) {
+      .container {
+        grid-gap: 2rem;
+      }
+    }
   }
   .sections a {
     border: 2px solid var(--color-secondary);
-    border-radius: 5px;
+    border-radius: 15px;
     box-shadow: 5px 5px 5px lightblue;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: bold;
-    margin: 2rem 0;
+    margin-bottom: 0.5rem;
     padding: 1rem;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+
+    @media (min-width: 600px) {
+      border-radius: 10px;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
     img {
       filter: invert(1);
+      width: 50px;
+      @media (min-width: 600px) {
+        width: 100px;
+      }
     }
     
     &:hover {
       background-color: var(--color-secondary);
       color: white;
-    img {
-      filter: invert(0);
-    }
+      img {
+        filter: invert(0);
+      }
       
     }
   }

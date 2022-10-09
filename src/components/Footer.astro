@@ -3,11 +3,11 @@ const today = new Date();
 ---
 
 <footer>
-	<p>
-		<a href="/legal">Nota Legal</a> - 
-		<a href="/api/joke">Explica'm un acudit</a> - 
-		&copy; {today.getFullYear()} Creu Alta Sabadell Bàsquet
-	</p>
+	<div class="container">
+		<div><a href="/legal">Nota Legal</a></div>
+		<div>&copy; {today.getFullYear()} Creu Alta Sabadell Bàsquet</div>
+		<div><a href="/api/joke">Explica'm un acudit</a></div>
+	</div>
 </footer>
 
 <style lang="scss">
@@ -15,12 +15,21 @@ const today = new Date();
 		background-color: #8db9da3c;
 		font-size: 0.8rem;
 		margin-top: 2rem;
-		padding: 2rem;
 		text-align: center;
 
+		.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 1rem;
+			@media (min-width: 600px) {
+				flex-direction: row;
+				justify-content: space-between;
+				padding: 2rem;
+			}
+		}
 		a {
 			color: var(--color-primary);
-			font-weight: bold;
 			text-decoration: none;
 		}
 	}
