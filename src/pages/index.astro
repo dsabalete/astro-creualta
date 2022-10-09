@@ -12,6 +12,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
   </div>
   
   <Sections />
+
+  <hr />
+
   <Sponsors />
 </BaseLayout>
 
@@ -22,7 +25,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
     text-align: center;
   }
   .hero {
-    margin: 0.8rem 0;
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,5 +39,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
     .hero {
       margin: 2rem 0;
     }
+  }
+  hr {
+    width: 100px;
+    border-top: 1px solid var(--color-primary);
   }
 </style>

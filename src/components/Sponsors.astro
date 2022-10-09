@@ -74,17 +74,31 @@ const shuffle = (array) => {
 }
 ---
 
-<div class="sponsor-list">
-  {shuffle(sponsorList).map((sponsor, index) => (
-    <div class="sponsor-item">
-      <a href={sponsor.href} target={sponsor.target}>
-        <img alt={sponsor.alt} src={sponsor.src} />
-      </a>
-    </div>
-  ))}
+<div class="sponsors">
+  <h3>Patrocinadors</h3>
+  
+  <div class="sponsor-list">
+    {shuffle(sponsorList).map((sponsor, index) => (
+      <div class="sponsor-item">
+        <a href={sponsor.href} target={sponsor.target}>
+          <img alt={sponsor.alt} src={sponsor.src} />
+        </a>
+      </div>
+    ))}
+  </div>
 </div>
 
 <style lang="scss">
+
+h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 3rem 0 1rem;
+  color: var(--color-primary);
+}
 .sponsor-list {
   width: 100%;
   display: flex;
@@ -98,7 +112,7 @@ const shuffle = (array) => {
   display: block;
   max-width: 300px;
   max-height: 100%;
-  width: 49%;
+  width: 45%;
   height: auto;
   margin: 0rem;
   text-align: center;
