@@ -30,6 +30,7 @@ const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
 						<th>Equip</th>
 						<th>Categoria</th>
 						<th>Temporada</th>
+						<th>Fitxa</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -38,6 +39,7 @@ const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
 							<td><a href={equip.url}>{equip.frontmatter.title}</a></td>
 							<td>{equip.frontmatter.categoria}</td>
 							<td>{equip.frontmatter.temporada}</td>
+							<td><a href={equip.frontmatter.fitxa} target="_blank">--&gt;</a></td>
 							</tr>
 							))}
 				</tbody>
