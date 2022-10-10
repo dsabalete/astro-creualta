@@ -4,6 +4,9 @@ import Sections from '../components/Sections.astro'
 import Sponsors from '../components/Sponsors/Sponsors.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 
+const ultima = (await Astro.glob('./noticies/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+)[0];
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -12,6 +15,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
   </div>
   
   <Sections />
+
+  <hr />
+  
+  {ultima && (
+    <div class="ultima-noticia">
+      <h3>Última notícia</h3>
+      <div><a href={ultima.url}>{ultima.frontmatter.title}</a></div>
+    </div>
+  )}
 
   <hr />
 
@@ -43,5 +55,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
   hr {
     width: 100px;
     border-top: 1px solid var(--color-primary);
+  }
+  .ultima-noticia {
+    margin: 2rem 0;
+    
+    div {
+      width: 100%;
+      text-align: center;
+    }
   }
 </style>

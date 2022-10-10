@@ -18,9 +18,8 @@ const posts = (await Astro.glob('./noticies/*.{md,mdx}')).sort(
 			table {
 				margin-top: 2rem;
 			}
-			table td {
-				text-align: left;
-				padding-right: 1rem;
+			tr td:last-child, tr th:last-child {
+				text-align: right;
 			}
 		</style>
 	</head>
@@ -30,25 +29,21 @@ const posts = (await Astro.glob('./noticies/*.{md,mdx}')).sort(
 			<table>
 				<thead>
 					<tr>
-						<th>Data Publicació</th>
 						<th>Titular de la noticia</th>
+						<th>Publicat</th>
 					</tr>
 				</thead>
 				<tbody>
 				{posts.map((post) => (
 					<tr>
 						<td>
-							<time datetime={post.frontmatter.pubDate}>
-								{new Date(post.frontmatter.pubDate).toLocaleDateString('ca-es', {
-									month: 'long',
-									day: 'numeric',
-									year: 'numeric',
-								})}
-							</time>
-						</td>
-						<td>
 							<a href={post.url}>{post.frontmatter.title}</a>
-						</td>
+							</td>
+							<td>
+								<time datetime={post.frontmatter.pubDate}>
+									{new Date(post.frontmatter.pubDate).toLocaleDateString('ca-es')}
+								</time>
+							</td>
 					</tr>
 				))}
 				</tbody>
@@ -57,3 +52,7 @@ const posts = (await Astro.glob('./noticies/*.{md,mdx}')).sort(
 		<Footer />
 	</body>
 </html>
+
+<style>
+
+</style>
