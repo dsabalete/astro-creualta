@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import Sections from '../components/Sections.astro'
-import Sponsors from '../components/Sponsors/Sponsors.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
 
 const ultima = (await Astro.glob('./noticies/*.{md,mdx}')).sort(
@@ -26,8 +25,6 @@ const ultima = (await Astro.glob('./noticies/*.{md,mdx}')).sort(
   )}
 
   <hr />
-
-  <Sponsors />
 </BaseLayout>
 
 <style lang="scss">
