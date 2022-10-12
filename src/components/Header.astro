@@ -1,5 +1,4 @@
 ---
-import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../config'
 ---
 
@@ -7,33 +6,33 @@ import { SITE_TITLE } from '../config'
 	<div class="upper-navbar container">
 		<div class="header-nav">
 			<nav>
-				<HeaderLink href="/">
+				<a href="/" title="Pàgina principal">
 					<img src="/images/home.svg" alt="Home logo">
-				</HeaderLink>
-				<HeaderLink href="/onsom" title="On Som?">
+				</a>
+				<a href="/onsom"  title="On Som?">
 					<img src="/images/location.svg" alt="Location logo">
-				</HeaderLink>
-				<HeaderLink href="/noticies" title="Noticies">
+				</a>
+				<a href="/noticies" title="Noticies">
 					<img src="/images/news.svg" alt="News logo" class="news-logo">
-				</HeaderLink>
-				<HeaderLink href="/equips" title="Equips">
+				</a>
+				<a href="/equips" title="Equips">
 					<img src="/images/team.svg" alt="Team logo" class="team-logo">
-				</HeaderLink>
-				<HeaderLink href="/historia" title="Historia">
+				</a>
+				<a href="/historia" title="Història">
 					<img src="/images/history.svg" alt="History logo" class="history-logo">
-				</HeaderLink>
-				<HeaderLink href="https://twitter.com/CreuAltaBasquet" target="_blank" title="Twitter">
+				</a>
+				<a href="https://twitter.com/CreuAltaBasquet" target="_blank" title="Twitter">
 					<img src="/images/twitter.svg" alt="Twitter logo">
-				</HeaderLink>
-				<HeaderLink href="https://www.instagram.com/creualtabasquet" target="_blank" title="Instagram">
+				</a>
+				<a href="https://www.instagram.com/creualtabasquet" target="_blank" title="Instagram">
 					<img src="/images/instagram.svg" alt="Instagram logo">
-				</HeaderLink>
-				<HeaderLink href="mailto:secretaria@creualtabasquet.cat" target="_blank" title="Email de Contacte">
+				</a>
+				<a href="mailto:secretaria@creualtabasquet.cat" target="_blank" title="Email de Contacte">
 					<img src="/images/mail.svg" alt="Mail logo">
-				</HeaderLink>	
+				</a>	
 			</nav>
 			
-			<h1><HeaderLink href="/">{SITE_TITLE}</HeaderLink></h1>
+			<h1><a href="/">{SITE_TITLE}</a></h1>
 		</div>
 	</div>
 </header>
@@ -67,8 +66,12 @@ header {
 		gap: 1rem;
 		
 		img {
+			&:hover {
+				filter: invert(1);
+			}
 			width: 32px;
 		}
+
 	}
 	h1 {
 		font-family: 'Helvetica', sans-serif;
