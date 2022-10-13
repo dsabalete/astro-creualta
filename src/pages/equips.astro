@@ -23,13 +23,11 @@ const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
 	<body>
 		<Header />
 		<main class="container">
-			<h1>Equips</h1>
+			<h1>Equips 2021/2022</h1>
 			<table>
 				<thead>
 					<tr>
 						<th>Equip</th>
-						<th>Categoria</th>
-						<th>Temporada</th>
 						<th>Fitxa</th>
 					</tr>
 				</thead>
@@ -37,9 +35,8 @@ const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
 					{equips.map((equip) => (
 						<tr class="equip">
 							<td><a href={equip.url}>{equip.frontmatter.title}</a></td>
-							<td>{equip.frontmatter.categoria}</td>
-							<td>{equip.frontmatter.temporada}</td>
-							<td><a href={equip.frontmatter.fitxa} target="_blank">--&gt;</a></td>
+							<td><a href={equip.frontmatter.fitxa} target="_blank">
+								<img src="/images/file.svg" alt="Icona Fitxa" width="20"></a></td>
 							</tr>
 							))}
 				</tbody>
