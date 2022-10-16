@@ -9,7 +9,7 @@ import vue from '@astrojs/vue'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://astro-creualta.netlify.com',
   // integrations: [mdx(), sitemap(), tailwind(), vue(), react(), svelte(), lit()]
   integrations: [mdx(), sitemap(), vue()]
 })

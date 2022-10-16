@@ -4,12 +4,11 @@ const today = new Date();
 
 <footer>
 	<div class="container">
-		<div><a href="/legal">Nota Legal</a></div>
-		<div><a href="mailto:secretaria@creualtabasquet.cat">
-			<img src="/images/mail.svg" alt="email"/>
-			secretaria@creualtabasquet.cat</a></div>
-		<div>&copy; {today.getFullYear()} Creu Alta Sabadell Bàsquet</div>
-		<div><a href="/api/joke">Explica'm un acudit</a></div>
+		<div>&copy; {today.getFullYear()} <a href="/">Creu Alta Sabadell Bàsquet</a></div>
+		<div><a href="/legal">Legal</a></div>
+		<div><a href="/contacte">Contacte</a></div>
+		<div><a href="/rss.xml">RSS</a></div>
+		<!-- <div><a href="/api/joke">Explica'm un acudit</a></div> -->
 	</div>
 </footer>
 
@@ -37,6 +36,7 @@ const today = new Date();
 				align: center;
 				vertical-align: middle;
 				margin-right: 0.4rem;
+				filter: invert(1);
 			}
 		}
 		a {

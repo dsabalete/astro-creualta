@@ -21,23 +21,25 @@ const title = "Contacte"
     </p>
     <input type="hidden" name="form-name" value="Formulari de contacte">
     <p>
-      Podeu deixar un missatge utilitzant el formulari de contacte de sota o be enviant 
-      un missatge a <a href="mailto:secretaria@creualtabasquet.cat">secretaria@creualtabasquet.cat</a>
+      Pots enscriure'ns directament al correu electrònic <a href="mailto:secretaria@creualtabasquet.cat">secretaria@creualtabasquet.cat</a>
+    </p>
+    <p>
+      O bé, ens podeu deixar un missatge utilitzant el formulari de contacte de sota.
     </p>
     <div>
       <div class="form-item" id="edit-name-wrapper">
-        <label for="edit-name">El vostre nom: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
+        <label for="edit-name">El teu nom: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
         <input type="text" maxlength="255" name="name" id="edit-name" size="60" value="" class="form-text required">
       </div>
       <div class="form-item" id="edit-mail-wrapper">
-        <label for="edit-mail">La vostra adreça electrònica: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
+        <label for="edit-mail">Adreça electrònica: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
         <input type="text" maxlength="255" name="mail" id="edit-mail" size="60" value="" class="form-text required">
       </div>
       <div class="form-item" id="edit-subject-wrapper">
         <label for="edit-subject">Assumpte: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
         <input type="text" maxlength="255" name="subject" id="edit-subject" size="60" value="" class="form-text required">
       </div>
-      <div class="form-item" id="edit-message-wrapper">
+      <div id="edit-message-wrapper">
         <label for="edit-message">Missatge: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
         <div class="resizable-textarea">
           <span>
@@ -45,14 +47,18 @@ const title = "Contacte"
           </span>
         </div>
       </div>
-      <input type="submit" name="op" id="edit-submit" value="Envia un correu electrònic" class="form-submit">
+      <input type="submit" name="op" id="edit-submit" value="ENVIA" class="form-submit">
     </div>
   </form>
-  <a href="/">Inici</a>
 </BaseLayout>
 
 <style>
   .hidden {
     display: none;
+  }
+  .form-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
   }
 </style>
