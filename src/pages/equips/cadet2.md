@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Cadet 2'
 categoria: 'cadet'
 description: 'Lorem ipsum dolor sit amet'

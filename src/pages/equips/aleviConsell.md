@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Aleví Consell Esportiu'
 categoria: 'mini'
 description: 'Lorem ipsum dolor sit amet'

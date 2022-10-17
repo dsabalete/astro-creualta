@@ -1,13 +1,16 @@
 ---
+import { SITE_TITLE } from '../config'
 const today = new Date();
 ---
 
 <footer>
 	<div class="container">
-		<div>&copy; {today.getFullYear()} <a href="/">Creu Alta Sabadell Bàsquet</a></div>
 		<div><a href="/legal">Legal</a></div>
 		<div><a href="/contacte">Contacte</a></div>
+		<div><a href="https://twitter.com/CreuAltaBasquet" target="_blank" title="Twitter">Twitter</a></div>
+		<div><a href="https://www.instagram.com/creualtabasquet" target="_blank" title="Instagram">Instagram</a></div>
 		<div><a href="/rss.xml">RSS</a></div>
+		<div>&copy; {today.getFullYear()} <a href="/">{ SITE_TITLE }</a></div>
 		<!-- <div><a href="/api/joke">Explica'm un acudit</a></div> -->
 	</div>
 </footer>
@@ -16,7 +19,6 @@ const today = new Date();
 	footer {
 		background-color: #8db9da3c;
 		font-size: 0.8rem;
-		margin-top: 2rem;
 		text-align: center;
 
 		.container {
@@ -24,12 +26,16 @@ const today = new Date();
 			flex-direction: column;
 			justify-content: space-between;
 			padding: 1rem;
+			
 			@media (min-width: 600px) {
 				flex-direction: row;
-				justify-content: space-between;
 				padding: 2rem;
 			}
-
+			.group {
+				display: flex;
+				justify-content: space-between;
+			}
+			
 			img {
 				width: 1.5rem;
 				display:inline-block; 

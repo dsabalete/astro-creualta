@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Escola de Bàsquet'
 categoria: 'mini'
 description: 'Lorem ipsum dolor sit amet'

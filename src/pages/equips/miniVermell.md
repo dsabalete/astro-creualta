@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Mini Vermell'
 categoria: 'mini'
 description: 'Lorem ipsum dolor sit amet'

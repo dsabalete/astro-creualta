@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Cadet Junior Consell'
 categoria: 'cadet'
 description: 'Lorem ipsum dolor sit amet'

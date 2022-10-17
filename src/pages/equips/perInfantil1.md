@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Pre-Infantil 1'
 categoria: 'infantil'
 description: 'Lorem ipsum dolor sit amet'

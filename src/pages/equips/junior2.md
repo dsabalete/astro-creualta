@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Junior 2'
 categoria: 'junior'
 description: 'Lorem ipsum dolor sit amet'

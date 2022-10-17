@@ -1,8 +1,8 @@
 ---
-layout: '../../layouts/BlogPost.astro'
+layout: '../../layouts/NoticiaLayout.astro'
 title: 'Dades dels equips actualitzades'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Mar 02 2022'
+pubDate: '02 Mar 2022'
 heroImage: '/images/escut_casb.png'
 ---
 

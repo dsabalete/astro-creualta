@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Infantil Femení'
 categoria: 'infantil'
 description: 'Lorem ipsum dolor sit amet'

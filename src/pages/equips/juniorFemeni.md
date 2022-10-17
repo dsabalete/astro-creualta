@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/Equip.astro'
+layout: '../../layouts/EquipLayout.astro'
 title: 'Junior Femení'
 categoria: 'junior'
 description: 'Lorem ipsum dolor sit amet'
