@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import { SITE_TITLE, SITE_DESCRIPTION, TEMPORADA } from '../config';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
@@ -23,7 +23,7 @@ const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
 	<body>
 		<Header />
 		<main class="container">
-			<h1>Equips 2021/2022</h1>
+			<h1>Equips {TEMPORADA}</h1>
 			<table>
 				<thead>
 					<tr>

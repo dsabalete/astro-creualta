@@ -1,11 +1,11 @@
 ---
 layout: '../../layouts/EquipLayout.astro'
-title: 'Cadet 1'
+title: 'Cadet Masculí 1'
 categoria: 'cadet'
 description: 'Lorem ipsum dolor sit amet'
 temporada: '2022/2023'
 heroImage: '/images/escutca.gif'
-fitxa: 'https://www.basquetcatala.cat/equip/49720'
+fitxa: 'https://www.basquetcatala.cat/equip/53626'
 pubDate: '08 Sep 2022'
 updatedDate:
 order: 9

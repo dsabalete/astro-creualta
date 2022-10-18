@@ -1,11 +1,11 @@
 ---
 layout: '../../layouts/EquipLayout.astro'
-title: 'Aleví Consell Esportiu'
+title: 'Aleví Blau Consell Esportiu'
 categoria: 'mini'
 description: 'Lorem ipsum dolor sit amet'
 temporada: '2022/2023'
 heroImage: '/images/escutca.gif'
-fitxa: 'https://ces.playoffinformatica.com/CompeticioResultatsWeb.php?accio=accio_competicio_publica_resultats&idGrup=662'
+fitxa:
 pubDate: '08 Sep 2022'
 updatedDate:
 order: 23

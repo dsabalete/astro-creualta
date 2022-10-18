@@ -1,11 +1,11 @@
 ---
 layout: '../../layouts/EquipLayout.astro'
-title: 'Cadet Blanc'
+title: 'Cadet Masculí Blanc'
 categoria: 'cadet'
 description: 'Lorem ipsum dolor sit amet'
 temporada: '2022/2023'
 heroImage: '/images/escutca.gif'
-fitxa: 'https://www.basquetcatala.cat/equip/51010'
+fitxa: 'https://www.basquetcatala.cat/equip/57894'
 pubDate: '08 Sep 2022'
 updatedDate:
 order: 12

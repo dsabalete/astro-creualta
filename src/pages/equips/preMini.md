@@ -1,14 +1,14 @@
 ---
 layout: '../../layouts/EquipLayout.astro'
-title: 'Cadet Junior Consell'
-categoria: 'cadet'
+title: 'Pre-Mini Masculí'
+categoria: 'infantil'
 description: 'Lorem ipsum dolor sit amet'
 temporada: '2022/2023'
 heroImage: '/images/escutca.gif'
-fitxa: 'https://cevot.playoffinformatica.com/CompeticioResultatsWeb.php?accio=accio_competicio_publica_resultats&idGrup=1151&idTemporada=8'
+fitxa: 'https://www.basquetcatala.cat/equip/55754'
 pubDate: '08 Sep 2022'
 updatedDate:
-order: 6
+order: 20
 ---
 
 - Entrenador:

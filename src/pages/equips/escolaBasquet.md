@@ -1,6 +1,6 @@
 ---
 layout: '../../layouts/EquipLayout.astro'
-title: 'Escola de Bàsquet'
+title: 'Escola de Bàsquet Pre-Benjamí'
 categoria: 'mini'
 description: 'Lorem ipsum dolor sit amet'
 temporada: '2022/2023'
