@@ -15,44 +15,25 @@ const posts = (await Astro.glob('./noticies/*.{md,mdx}')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
-			table {
-				margin-top: 2rem;
-			}
-			tr td:last-child, tr th:last-child {
-				text-align: right;
+			time {
+				font-size: small;
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main class="container">
-			<table>
-				<thead>
-					<tr>
-						<th>Titular de la noticia</th>
-						<th>Publicat</th>
-					</tr>
-				</thead>
-				<tbody>
-				{posts.map((post) => (
-					<tr>
-						<td>
-							<a href={post.url}>{post.frontmatter.title}</a>
-							</td>
-							<td>
-								<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString('ca-es')}
-								</time>
-							</td>
-					</tr>
-				))}
-				</tbody>
-			</table>
+			<h3>Notícies</h3>
+			{posts.map((post) => (
+				<p>
+					<a href={post.url}>{post.frontmatter.title}</a><br/>
+					<time datetime={post.frontmatter.pubDate}>
+					{new Date(post.frontmatter.pubDate).toLocaleDateString('ca-es')}
+					</time>
+				</p>
+			))}
 		</main>
 		<Footer />
 	</body>
 </html>
 
-<style>
-
-</style>
