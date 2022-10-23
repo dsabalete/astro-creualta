@@ -5,7 +5,7 @@ const title = "Contacte"
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <h1>{title}</h1>
+  <h2>{title}</h2>
   <form 
     netlify
     netlify-honeypot="bot-field"
@@ -27,38 +27,78 @@ const title = "Contacte"
       O bé, ens podeu deixar un missatge utilitzant el formulari de contacte de sota.
     </p>
     <div>
-      <div class="form-item" id="edit-name-wrapper">
-        <label for="edit-name">El teu nom: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
-        <input type="text" maxlength="255" name="name" id="edit-name" size="60" value="" class="form-text required">
+      <div 
+        class="flex flex-col justify-between mb-4 p-2 border-b-2 border-blue-3" 
+        id="edit-name-wrapper">
+        <label for="edit-name" >El teu nom: <span title="Aquest camp és obligatori.">*</span></label>
+        <input type="text" maxlength="255" name="name" id="edit-name" size="60" value="" 
+          class="w-full border-[1px] border-blue-300">
       </div>
-      <div class="form-item" id="edit-mail-wrapper">
-        <label for="edit-mail">Adreça electrònica: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
-        <input type="text" maxlength="255" name="mail" id="edit-mail" size="60" value="" class="form-text required">
+      <div 
+        class="flex flex-col justify-between mb-4 p-2 border-b-2 border-blue-3" 
+        id="edit-mail-wrapper">
+        <label for="edit-mail">Adreça electrònica: <span title="Aquest camp és obligatori.">*</span></label>
+        <input type="text" maxlength="255" name="mail" id="edit-mail" size="60" value=""
+          class="w-full border-[1px] border-blue-300">
       </div>
-      <div class="form-item" id="edit-subject-wrapper">
-        <label for="edit-subject">Assumpte: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
-        <input type="text" maxlength="255" name="subject" id="edit-subject" size="60" value="" class="form-text required">
+      <div 
+        class="flex flex-col justify-between mb-4 p-2 border-b-2 border-blue-3" 
+        id="edit-subject-wrapper">
+        <label for="edit-subject">Assumpte: <span title="Aquest camp és obligatori.">*</span></label>
+        <input type="text" maxlength="255" name="subject" id="edit-subject" size="60" value=""
+          class="w-full border-[1px] border-blue-300">
       </div>
-      <div id="edit-message-wrapper">
-        <label for="edit-message">Missatge: <span class="form-required" title="Aquest camp és obligatori.">*</span></label>
+      <div 
+        class="flex flex-col justify-between mb-4 p-2 border-b-2 border-blue-3" 
+        id="edit-message-wrapper">
+        <label for="edit-message">Missatge: <span title="Aquest camp és obligatori.">*</span></label>
         <div class="resizable-textarea">
           <span>
-            <textarea cols="60" rows="5" name="message" id="edit-message" class="form-textarea resizable required textarea-processed"></textarea>
+            <textarea cols="60" rows="5" name="message" id="edit-message" 
+              class="w-full border-[1px] border-blue-300"></textarea>
           </span>
         </div>
       </div>
-      <input type="submit" name="op" id="edit-submit" value="ENVIA" class="form-submit">
+      <div class="w-full text-center">
+        <input type="submit" name="op" id="edit-submit" value="ENVIA" 
+        class="mt-2 px-4 py-2 border-2 border-blue-300 rounded text-blue-900 font-bold hover:bg-blue-300 hover:text-white">
+      </div>
     </div>
   </form>
 </BaseLayout>
 
-<style>
-  .hidden {
-    display: none;
+<script>
+const frm = document.querySelector('form')
+
+function isEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+}
+
+function validateForm() {
+  const name = document.querySelector('#edit-name').value
+  const mail = document.querySelector('#edit-mail').value
+  const subject = document.querySelector('#edit-subject').value
+  const message = document.querySelector('#edit-message').value
+  if (name === '' || mail === '' || subject === '' || message === '') {
+    alert('Tots els camps són obligatoris')
+    return false
   }
-  .form-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+  if (!isEmail(mail)) {
+    alert('L\'adreça de correu electrònic no és vàlida')
+    return false
   }
-</style>
+  return true
+}
+
+frm.addEventListener('submit', (e) => {
+  e.preventDefault()
+  const data = new FormData(frm)
+  const value = Object.fromEntries(data.entries())
+  console.log(value)
+  if (validateForm()) {
+    frm.submit()
+  } else {
+    return false
+  }
+})
+</script>

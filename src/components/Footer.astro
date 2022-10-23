@@ -3,8 +3,8 @@ import { SITE_TITLE } from '../config'
 const today = new Date();
 ---
 
-<footer>
-	<div class="container">
+<footer class="bg-blue-100 text-xs text-center">
+	<div class="container flex flex-col sm:flex-row justify-between p-4 sm:p-8">
 		<div><a href="/legal">Legal</a></div>
 		<div><a href="/contacte">Contacte</a></div>
 		<div><a href="https://twitter.com/CreuAltaBasquet" target="_blank" title="Twitter">Twitter</a></div>
@@ -16,38 +16,7 @@ const today = new Date();
 </footer>
 
 <style lang="scss">
-	footer {
-		background-color: #8db9da3c;
-		font-size: 0.8rem;
-		text-align: center;
-
-		.container {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			padding: 1rem;
-			
-			@media (min-width: 600px) {
-				flex-direction: row;
-				padding: 2rem;
-			}
-			.group {
-				display: flex;
-				justify-content: space-between;
-			}
-			
-			img {
-				width: 1.5rem;
-				display:inline-block; 
-				align: center;
-				vertical-align: middle;
-				margin-right: 0.4rem;
-				filter: invert(1);
-			}
-		}
-		a {
-			color: var(--color-primary);
-			text-decoration: none;
-		}
+	a {
+		@apply text-blue-900 no-underline;
 	}
 </style>

@@ -2,65 +2,37 @@
 
 ---
 
-<div class="sections">
-  <a href="/noticies">
-    <img src="/images/news.svg" alt="News Icon">
-    <div>Noticies</div> 
+<div class="sections grid grid-cols-3 gap-4 mb-4 sm:mb-6 mx-0">
+  <a 
+    href="/noticies" 
+    class="group">
+    <img src="/images/news.svg" alt="News Icon" class="group-hover:invert-0">
+    <h3>Noticies Club</h3> 
   </a>
-  <a href="/equips">
-    <img src="/images/team.svg" alt="Team Icon">
-    <div>Equips</div>
+  <a 
+    href="/equips"
+    class="group">
+    <img src="/images/team.svg" alt="Team Icon" class="group-hover:invert-0">
+    <h3>Secció Equips</h3>
   </a>
-  <a href="https://customify.es/creualta" target="_blank">
-    <img src="/images/shop.svg" alt="Botiga Icon">
-    <div>Botiga Oficial</div>
+  <a 
+    href="https://customify.es/creualta" target="_blank" 
+    class="group">
+    <img src="/images/shop.svg" alt="Botiga Icon" class="group-hover:invert-0">
+    <h3>Botiga Oficial</h3>
   </a>
 </div>
 
 <style lang="scss">
-  .sections {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    margin: 2rem 0;
-    @media (min-width: 600px) {
-      .container {
-        grid-gap: 2rem;
-      }
-    }
+  a {
+    @apply hover:text-white hover:bg-blue-300 border-4 border-blue-300 sm:text-2xl 
+      shadow-lg rounded-lg sm:rounded-xl font-bold mb-2 p-4 text-center uppercase;
   }
-  .sections a {
-    border: 2px solid var(--color-secondary);
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px lightblue;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+  img  {
+    @apply m-auto w-12 invert;
+  }
+  h3 {
+    margin-top: 0.5rem;
+  }
 
-    @media (min-width: 600px) {
-      border-radius: 10px;
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-    img {
-      filter: invert(1);
-      width: 50px;
-      @media (min-width: 600px) {
-        width: 100px;
-      }
-    }
-    
-    &:hover {
-      background-color: var(--color-secondary);
-      color: white;
-      img {
-        filter: invert(0);
-      }
-      
-    }
-  }
 </style>

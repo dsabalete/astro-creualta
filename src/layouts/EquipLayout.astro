@@ -24,42 +24,30 @@ const {
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			body {
-				display: grid;
-				grid-template-rows: auto 1fr auto;
-			}
-      article p span {
-        text-transform: uppercase;
-        color: #000;
-      }
-			hr {
-  			border-top: 1px solid #DDD;
-				margin: 1rem 0;
-			}
-		</style>
 	</head>
 
-	<body>
+	<body class="grid grid-rows-[auto_1fr_auto] min-h-screen">
 		<Header />
 		<main class="container">
-      <h1>{title} - Temporada {temporada}</h1>
+      <h2>{title} - Temporada {temporada}</h2>
 
 			<article>
         {heroImage && (
-					<img
+						<img
 						width={720}
 						height={360}
 						src={heroImage}
 						alt=""
-					/>
+						class="mx-auto"
+						/>
 				)}
 
-        <p>Categoria: <span>{categoria}</span></p>
+        <p>Categoria: <span class="uppercase text-black">{categoria}</span></p>
 				{pubDate && <div>Publicació: <time>{pubDate}</time></div>}
 				{updatedDate && <div>Ultima modificació: <time>{updatedDate}</time></div>}
 				
-        <hr/>
+        <hr class="border-t-2 border-blue-300 my-4"/>
+
         {fitxa && (
           <a href={fitxa} target="_blank">Fitxa</a>
         )}
