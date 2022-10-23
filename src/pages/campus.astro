@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config'
-const title = "Missatge enviat!"
+import Campus from '../components/Campus.vue'
+const title = "Matriculació al Campus del Creu Alta"
 ---
-
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
-  <main>
-    <h2>{title}</h2>
-    <p>Gràcies per posar-vos en contacte amb el Club! 
-      Pots tornar a la pàgina principal fent clic <a href="/">aquí</a>.</p> 
+  <h2>{title}</h2>
+  <main class="container">
+    <Campus />
   </main>
+  <a href="/">Inici</a>
 </BaseLayout>

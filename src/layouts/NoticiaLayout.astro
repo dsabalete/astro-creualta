@@ -21,16 +21,15 @@ const {
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		
 	</head>
 
-	<body>
+	<body class="grid grid-rows-[auto_1fr_auto] min-h-screen">
 		<Header />
 		<main class="container">
-			<h1 class="title">{title}</h1>
+			<h2>{title}</h2>
 
 			<article>
-				{pubDate && <time>Publicat el {pubDate}</time>}
+				{pubDate && <time class="text-gray-500">Publicat el {pubDate}</time>}
 				{updatedDate && <div>Ultima modificació <time>{updatedDate}</time></div>}
 				{heroImage && (
 					<img
@@ -38,6 +37,7 @@ const {
 						height={360}
 						src={heroImage}
 						alt="Imatge de portada"
+						class="mx-auto"
 					/>
 				)}
 				<hr/>
@@ -49,12 +49,12 @@ const {
 </html>
 
 <style lang="scss">
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-  			border-top: 1px solid #DDD;
-				margin: 1rem 0;
-			}
-		</style>
+	.title {
+		font-size: 2em;
+		margin: 0.25em 0 0;
+	}
+	hr {
+		border-top: 1px solid #DDD;
+		margin: 1rem 0;
+	}
+</style>

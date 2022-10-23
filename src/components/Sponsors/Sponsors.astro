@@ -64,10 +64,10 @@ const shuffle = (array) => {
 }
 ---
 
-<div class="sponsors">
-  <h3>Patrocinadors</h3>
+<div class="sponsors my-8">
+  <h3 class="text-center text-blue-900">Patrocinadors</h3>
   
-  <div class="sponsor-list">
+  <div class="sponsor-list w-full flex">
     {sponsorList.map((sponsor, index) => (
       <div class="sponsor-item">
         <a href={sponsor.href} target={sponsor.target}>
@@ -79,12 +79,7 @@ const shuffle = (array) => {
 </div>
 
 <style lang="scss">
-.sponsors {
-  margin: 2rem 0;
-}
 .sponsor-list {
-  width: 100%;
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
