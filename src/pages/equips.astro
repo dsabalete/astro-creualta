@@ -15,14 +15,21 @@ const equips = (await Astro.glob('./equips/*.{md,mdx}')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
+			h2 {
+				margin-bottom: 1rem;
+			}
+			th {
+				text-align: left;
+			}
 			td {
 				padding-right: 3rem;
+				padding-top: 1rem;
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
-		<main class="container">
+		<main class="container w-96">
 			<h2>Equips {TEMPORADA}</h2>
 			<table>
 				<thead>
