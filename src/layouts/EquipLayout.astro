@@ -43,18 +43,18 @@ const {
 				)}
 
         <p>Categoria: <span class="uppercase text-black">{categoria}</span></p>
-				{pubDate && <div>Publicació: <time>{pubDate}</time></div>}
+				{pubDate && <div class="text-gray-500 text-sm">Publicació: <time>{pubDate}</time></div>}
 				{updatedDate && <div>Ultima modificació: <time>{updatedDate}</time></div>}
 				
         <hr class="border-t-2 border-blue-300 my-4"/>
 
         {fitxa && (
-          <a href={fitxa} target="_blank">Fitxa</a>
+          <a href={fitxa} target="_blank" class="text-blue-500 underline">Fitxa</a>
         )}
 				<slot />
         
 			</article>
-      <a href="/equips">Altres equips</a>
+      <a href="/equips" class="text-blue-500 underline">Altres equips</a>
 		</main>
 		<Footer />
 	</body>
